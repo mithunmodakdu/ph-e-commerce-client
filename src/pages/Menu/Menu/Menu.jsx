@@ -14,22 +14,7 @@ const Menu = () => {
                    title={"OUR MENU"} 
             ></Cover>
 
-            <PopularItems></PopularItems>
-            <Cover img={menuImg}
-                   title={"OUR MENU"} 
-            ></Cover>
-
-            <PopularItems></PopularItems>
-            <Cover img={menuImg}
-                   title={"OUR MENU"} 
-            ></Cover>
-
-            <PopularItems></PopularItems>
-            <Cover img={menuImg}
-                   title={"OUR MENU"} 
-            ></Cover>
-
-            <PopularItems></PopularItems>
+           
         </div>
     );
 };
