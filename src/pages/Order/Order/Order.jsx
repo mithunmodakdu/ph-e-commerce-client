@@ -9,16 +9,19 @@ import OrderTab from "../OrderTab/OrderTab";
 import { useParams } from "react-router-dom";
 
 const Order = () => {
-    const [tabIndex, setTabIndex] = useState(0);
-    const [menu] = useMenu();
+    const categories = ['salad', 'pizza', 'soup', 'dessert',  'drinks'];
     const {category} = useParams();
-    console.log(category)
+    const initialIndex = categories.indexOf(category);
+    const [tabIndex, setTabIndex] = useState(initialIndex);
+
+    const [menu] = useMenu();
     const offered = menu.filter(item => item.category === 'offered');
     const desserts = menu.filter(item => item.category === 'dessert');
     const pizza = menu.filter(item => item.category === 'pizza');
     const soup = menu.filter(item => item.category === 'soup');
     const salad = menu.filter(item => item.category === 'salad');
     const drinks = menu.filter(item => item.category === 'drinks');
+    
     return (
         <div>
             <Cover title={"Our Shop"} img={orderCoverImg}></Cover>
